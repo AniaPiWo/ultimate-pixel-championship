@@ -1,0 +1,16 @@
+.top-margin,
+.btm-margin {
+    margin: 1% auto;
+    width: 375px;
+    height: 32px;
+    position: absolute;
+}
+
+.top-margin {
+    top: -4px;
+    background-image: url(../src/topMargin.png);
+}
+.btm-margin {
+    bottom: -4px;
+    background-image: url(../src/btmMargin.png);
+}
