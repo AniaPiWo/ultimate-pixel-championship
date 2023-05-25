@@ -1,15 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+import { WelcomeScreen } from './components/WelcomeScreen';
 import './App.css';
 
 function App() {
-   const [count, setCount] = useState(0);
+   const buttonCheck = () => {
+      console.log('Choose button clicked!');
+   };
 
    return (
       <>
-         <p>testing</p>
+         <WelcomeScreen chooseBtn={buttonCheck} />
       </>
    );
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+export default App;
