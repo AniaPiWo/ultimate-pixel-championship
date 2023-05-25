@@ -1,6 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Roboto+Mono&display=swap');
+
 #root {
-  max-width: 1280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 375px;
+  height: 755px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  background: #0F0F0F;
+  color: white;
+  font-size: 42px;
+  background-image: url('./src/assets/img/topMargin.png'), url('./src/assets/img/btmMargin.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: top center, bottom center;
+  background-size: auto, auto;
 }
+
+.welcomeBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.welcomeTitleTop {
+  font-family: "Germania One", sans-serif;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.welcomeTitleBottom {
+  color: #DA8B14;
+  border-bottom: 4px dashed #DA8B14;
+}
+
+.welcomeText {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #EFB55E;
+}
+
+.chooseBtn {
+  border: none;
+  outline: none;
+  display: inline-block; 
+  margin-top: 50px;
+}
+
+
