@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 375px;
+  width: 375px;
   height: 755px;
   margin: 0 auto;
   background: #0F0F0F;
