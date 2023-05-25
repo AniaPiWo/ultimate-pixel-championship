@@ -1,18 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState } from 'react';
 import { WelcomeScreen } from './components/WelcomeScreen';
 import './App.css';
 
 function App() {
-   const buttonCheck = () => {
-      console.log('Choose button clicked!');
+   const [isChosen, setChosenState] = useState(false);
+
+   const openWizard = () => {
+      setChosenState(true);
    };
 
-   return (
-      <>
-         <WelcomeScreen chooseBtn={buttonCheck} />
-      </>
-   );
+   return <div>{!isChosen ? <WelcomeScreen chooseBtn={openWizard} /> : <p>Wizard screen</p>}</div>;
 }
 
 export default App;
