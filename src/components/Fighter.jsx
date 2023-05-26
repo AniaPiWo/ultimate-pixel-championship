@@ -1,34 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export const Fighter = ({ formBtn }) => {
-   /*    const [name, setName] = useState(props.name);
-   const [health, setHealth] = useState(props.health);
-   const [attack, setAttack] = useState(props.attack);
-   const [special, setSpecial] = useState(props.special);
-   const [weakness, setWeakness] = useState(props.weakness); */
-
+export const Fighter = ({ name, health, attack, special, weakness, formBtn, imageSrc }) => {
    return (
       <>
          <div className="fighterBox">
-            <img src="./src/assets/img/Karen.png" alt="fighter" className="fighterImg" />
-            <p className="fighterName">Annoyed Karen</p>
+            <img src={`./src/assets/img/${imageSrc}`} alt="fighter" className="fighterImg" />
+            <p className="fighterName">{name}</p>
             <div className="statBox">
                <div>
                   <p className="statName">health</p>
-                  <p className="statValue">67</p>
+                  <p className="statValue">{health}</p>
                </div>
                <div>
                   <p className="statName">attack</p>
-                  <p className="statValue">14 - 18</p>
+                  <p className="statValue">{attack}</p>
                </div>
             </div>
             <div>
                <p className="statName">special attack</p>
-               <p className="statValue">Passive Aggressiveness</p>
+               <p className="statValue">{special}</p>
             </div>
             <div>
                <p className="statName">weakness</p>
-               <p className="statValue">Logical thinking</p>
+               <p className="statValue">{weakness}</p>
             </div>
             <div className="oval"></div>
          </div>

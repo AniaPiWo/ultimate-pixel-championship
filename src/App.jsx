@@ -3,6 +3,7 @@ import { WelcomeScreen } from './components/WelcomeScreen.jsx';
 import { Fighter } from './components/Fighter.jsx';
 import { Form } from './components/Form.jsx';
 import { Confirmation } from './components/Confirmation.jsx';
+import { fighters } from '../fighters.js';
 import './App.css';
 
 function App() {
@@ -11,6 +12,9 @@ function App() {
    const [isConfirmation, setConfirmationState] = useState(false);
    const [screenTitle, setScreenTitle] = useState('');
    const [stepImg, setStepImg] = useState('');
+   const [currentFighterIndex, setCurrentFighterIndex] = useState(0);
+
+   let fighter = fighters[currentFighterIndex];
 
    const openWizard = () => {
       setWizardState(true);
@@ -39,6 +43,14 @@ function App() {
       setConfirmationState(false);
    };
 
+   const nextFighter = () => {
+      setCurrentFighterIndex((index) => (index + 1) % fighters.length);
+   };
+
+   const prevFighter = () => {
+      setCurrentFighterIndex((index) => (index - 1 + fighters.length) % fighters.length);
+   };
+
    return (
       <div className="screen">
          {!isWizard && !isForm && !isConfirmation ? (
@@ -47,7 +59,35 @@ function App() {
             <>
                <h2 className="screenTitle">{screenTitle}</h2>
                <img className="stepImg" src={`./src/assets/img/${stepImg}`} alt="stepper" />
-               {isWizard && <Fighter formBtn={openForm} />}
+               {isWizard && (
+                  <>
+                     <Fighter
+                        name={fighter.name}
+                        imageSrc={fighter.imgSrc}
+                        health={fighter.health}
+                        attack={fighter.attack}
+                        special={fighter.special}
+                        weakness={fighter.weakness}
+                        formBtn={openForm}
+                     />
+                     {currentFighterIndex !== 0 && (
+                        <img
+                           src="./src/assets/img/prevBtn.png"
+                           alt="prev button"
+                           className="prevBtn"
+                           onClick={prevFighter}
+                        />
+                     )}
+                     {currentFighterIndex !== fighters.length - 1 && (
+                        <img
+                           src="./src/assets/img/nextBtn.png"
+                           alt="next button"
+                           className="nextBtn"
+                           onClick={nextFighter}
+                        />
+                     )}
+                  </>
+               )}
                {isForm && <Form confirmBtn={openConfirmation} />}
                {isConfirmation && <Confirmation restartBtn={restartApp} />}
             </>
