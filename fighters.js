@@ -1,7 +1,7 @@
 export const fighters = [
    {
       name: 'Annoyed Karen',
-      imgSrc: 'img/Karen.png',
+      imgSrc: 'Karen.png',
       health: 67,
       attack: '14 - 18',
       specialAttack: 'Passive Aggressiveness',
@@ -9,7 +9,7 @@ export const fighters = [
    },
    {
       name: 'Mad Suzie',
-      imgSrc: 'img/MadSuzie.png',
+      imgSrc: 'MadSuzie.png',
       health: 78,
       attack: '12 - 18',
       specialAttack: 'Fist Punch',
@@ -17,7 +17,7 @@ export const fighters = [
    },
    {
       name: 'Jenny Wick',
-      imgSrc: 'img/JennyWick.png',
+      imgSrc: 'JennyWick.png',
       health: 55,
       attack: '22 - 24',
       specialAttack: 'Pencil Stab',
@@ -25,7 +25,7 @@ export const fighters = [
    },
    {
       name: 'Purple Pie',
-      imgSrc: 'img/PurplePie.png',
+      imgSrc: 'PurplePie.png',
       health: 80,
       attack: '9 - 12',
       specialAttack: 'Roasting',
@@ -33,7 +33,7 @@ export const fighters = [
    },
    {
       name: 'Pale Lora',
-      imgSrc: 'img/PaleLora.png',
+      imgSrc: 'PaleLora.png',
       health: 60,
       attack: '15 - 16',
       specialAttack: 'Bleach Splash',
@@ -41,7 +41,7 @@ export const fighters = [
    },
    {
       name: 'Ivy Irene',
-      imgSrc: 'img/IvyIrene.png',
+      imgSrc: 'IvyIrene.png',
       health: 70,
       attack: '10 - 14',
       specialAttack: 'Potion Pill',
