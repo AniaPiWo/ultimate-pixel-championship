@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-export const Fighter = (props) => {
-   const [name, setName] = useState(props.name);
+export const Fighter = ({ formBtn }) => {
+   /*    const [name, setName] = useState(props.name);
    const [health, setHealth] = useState(props.health);
    const [attack, setAttack] = useState(props.attack);
    const [special, setSpecial] = useState(props.special);
-   const [weakness, setWeakness] = useState(props.weakness);
+   const [weakness, setWeakness] = useState(props.weakness); */
 
    return (
       <>
@@ -32,7 +32,7 @@ export const Fighter = (props) => {
             </div>
             <div className="oval"></div>
          </div>
-         <img src="./src/assets/img/chooseBtn.png" className="chooseBtn" />
+         <img src="./src/assets/img/chooseBtn.png" className="chooseBtn" onClick={formBtn} />
       </>
    );
 };
