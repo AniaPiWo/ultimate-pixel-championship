@@ -17,13 +17,13 @@ function App() {
    };
 
    return (
-      <div>
+      <div className="screen">
          {!isChosen ? (
             <WelcomeScreen startBtn={openWizard} />
          ) : (
             <>
                <h2 className="screenTitle">{screenTitle}</h2>
-               <img className="screenImg" src={`./src/assets/img/${stepImg}`} alt="stepper" />
+               <img className="stepImg" src={`./src/assets/img/${stepImg}`} alt="stepper" />
                <Fighter />
             </>
          )}

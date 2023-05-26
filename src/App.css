@@ -127,7 +127,7 @@
   background: #DA8B14;
   opacity: 0.4;
   top: 155px;
-  left: 40px;
+  left: 0px;
 }
 
 .chooseBtn {
@@ -136,4 +136,14 @@
 
 .fighterImg {
   z-index: 10;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stepImg {
+  width: 146px;
 }
