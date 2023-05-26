@@ -33,6 +33,12 @@ function App() {
       setScreenTitle('Confirmation');
    };
 
+   const restartApp = () => {
+      setWizardState(false);
+      setFormState(false);
+      setConfirmationState(false);
+   };
+
    return (
       <div className="screen">
          {!isWizard && !isForm && !isConfirmation ? (
@@ -43,7 +49,7 @@ function App() {
                <img className="stepImg" src={`./src/assets/img/${stepImg}`} alt="stepper" />
                {isWizard && <Fighter formBtn={openForm} />}
                {isForm && <Form confirmBtn={openConfirmation} />}
-               {isConfirmation && <Confirmation />}
+               {isConfirmation && <Confirmation restartBtn={restartApp} />}
             </>
          )}
       </div>

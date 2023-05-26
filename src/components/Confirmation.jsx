@@ -1,10 +1,10 @@
 import React from 'react';
 
-export const Confirmation = () => {
+export const Confirmation = ({ restartBtn }) => {
    return (
       <>
          <p>Confirmation screen</p>
-         <button>Restart</button>
+         <button onClick={restartBtn}>Restart</button>
       </>
    );
 };
