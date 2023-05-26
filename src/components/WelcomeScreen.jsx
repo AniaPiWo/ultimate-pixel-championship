@@ -1,7 +1,7 @@
 import React from 'react';
 import '/src/App.css';
 
-export const WelcomeScreen = ({ chooseBtn }) => {
+export const WelcomeScreen = ({ startBtn }) => {
    return (
       <>
          <div className="welcomeBox">
@@ -14,7 +14,7 @@ export const WelcomeScreen = ({ chooseBtn }) => {
                <br />
                for upcoming tournee.
             </p>
-            <img src="./src/assets/img/chooseBtn.png" className="chooseBtn" onClick={chooseBtn} />
+            <img src="./src/assets/img/chooseBtn.png" className="startBtn" onClick={startBtn} />
          </div>
       </>
    );
