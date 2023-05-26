@@ -1,15 +1,34 @@
 import React, { useState } from 'react';
-import { WelcomeScreen } from './components/WelcomeScreen';
+import { WelcomeScreen } from './components/WelcomeScreen.jsx';
+import { Fighter } from './components/Fighter.jsx';
 import './App.css';
 
 function App() {
    const [isChosen, setChosenState] = useState(false);
+   const [screenTitle, setScreenTitle] = useState('Choose your fighter');
+   const [stepImg, setStepImg] = useState('Step1.png');
 
    const openWizard = () => {
       setChosenState(true);
    };
 
-   return <div>{!isChosen ? <WelcomeScreen chooseBtn={openWizard} /> : <p>Wizard screen</p>}</div>;
+   const buttonTest = () => {
+      console.log('clicked!');
+   };
+
+   return (
+      <div>
+         {!isChosen ? (
+            <WelcomeScreen startBtn={openWizard} />
+         ) : (
+            <>
+               <h2 className="screenTitle">{screenTitle}</h2>
+               <img className="screenImg" src={`./src/assets/img/${stepImg}`} alt="stepper" />
+               <Fighter />
+            </>
+         )}
+      </div>
+   );
 }
 
 export default App;
