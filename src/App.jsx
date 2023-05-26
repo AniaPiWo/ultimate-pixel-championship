@@ -16,7 +16,6 @@ function App() {
       setWizardState(true);
       setStepImg('Step1.png');
       setScreenTitle('Choose your fighter');
-      stateTest();
    };
 
    const openForm = () => {
@@ -25,7 +24,6 @@ function App() {
       setFormState(true);
       setStepImg('Step2.png');
       setScreenTitle('Booking Details');
-      stateTest();
    };
 
    const openConfirmation = () => {
@@ -33,13 +31,6 @@ function App() {
       setConfirmationState(true);
       setStepImg('Step3.png');
       setScreenTitle('Confirmation');
-      stateTest();
-   };
-
-   const stateTest = () => {
-      console.log(isWizard);
-      console.log(isForm);
-      console.log(isConfirmation);
    };
 
    return (
