@@ -90,7 +90,7 @@ function App() {
                      )}
                   </>
                )}
-               {isForm && <Form confirmBtn={openConfirmation} />}
+               {isForm && <Form confirmBtn={openConfirmation} chosenFighter={fighter.name} />}
                {isConfirmation && <Confirmation restartBtn={restartApp} />}
             </>
          )}
