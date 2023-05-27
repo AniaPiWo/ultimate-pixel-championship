@@ -20,6 +20,7 @@ function App() {
       setWizardState(true);
       setStepImg('Step1.png');
       setScreenTitle('Choose your fighter');
+      currHeroCheck();
    };
 
    const openForm = () => {
@@ -28,6 +29,7 @@ function App() {
       setFormState(true);
       setStepImg('Step2.png');
       setScreenTitle('Booking Details');
+      localStorage.setItem('fighter', JSON.stringify(fighter));
    };
 
    const openConfirmation = () => {
@@ -44,11 +46,11 @@ function App() {
    };
 
    const nextFighter = () => {
-      setCurrentFighterIndex((index) => (index + 1) % fighters.length);
+      setCurrentFighterIndex((index) => index + 1);
    };
 
    const prevFighter = () => {
-      setCurrentFighterIndex((index) => (index - 1 + fighters.length) % fighters.length);
+      setCurrentFighterIndex((index) => index - 1);
    };
 
    return (
@@ -88,7 +90,7 @@ function App() {
                      )}
                   </>
                )}
-               {isForm && <Form confirmBtn={openConfirmation} />}
+               {isForm && <Form confirmBtn={openConfirmation} chosenFighter={fighter.name} />}
                {isConfirmation && <Confirmation restartBtn={restartApp} />}
             </>
          )}

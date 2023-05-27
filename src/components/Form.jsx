@@ -1,12 +1,12 @@
 import React from 'react';
 
-export const Form = () => {
+export const Form = ({ chosenFighter }) => {
    return (
       <>
          <div className="formBox">
             <div>
                <p className="chosenFighter">chosen fighter</p>
-               <p className="chosenFighterName">Sikaczu</p>
+               <p className="chosenFighterName">{chosenFighter}</p>
             </div>
             <form className="form">
                <label htmlFor="fighterInput" className="chosenFighter">
