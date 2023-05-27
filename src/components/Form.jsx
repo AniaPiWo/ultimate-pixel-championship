@@ -1,10 +1,20 @@
 import React from 'react';
 
-export const Form = ({ confirmBtn }) => {
+export const Form = () => {
    return (
       <>
-         <p>Form screen</p>
-         <button onClick={confirmBtn}>Next step</button>
+         <div className="formBox">
+            <div>
+               <p>chosen fighter</p>
+               <p>Sikaczu</p>
+            </div>
+            <form>
+               <label htmlFor="fighterInput">chosen fighter</label>
+               <input type="text" id="fighterInput" placeholder="Your name" />
+               <label htmlFor="fighterInput">chosen fighter</label>
+               <input type="text" id="fighterInput" placeholder="Your name" />
+            </form>
+         </div>
       </>
    );
 };
