@@ -213,17 +213,19 @@
   color: #9F9F9F;
 }
 
+button {
+  border: none;
+  outline: none;
+  overflow: hidden;
+  background-color: #0F0F0F;
+  cursor: pointer;
+}
+
 .submitBtn {
   margin-top: 100px;
-  cursor: pointer;
 }
 
 .backBtn {
   margin-top: 15px;
-  cursor: pointer;
-}
 
-.backBtn {
-  margin-top: 15px;
-  cursor: pointer;
 }

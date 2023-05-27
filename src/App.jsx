@@ -18,6 +18,8 @@ function App() {
 
    const openWizard = () => {
       setWizardState(true);
+      setFormState(false);
+      setCurrentFighterIndex(0);
       setStepImg('Step1.png');
       setScreenTitle('Choose your fighter');
    };
@@ -44,11 +46,11 @@ function App() {
    };
 
    const nextFighter = () => {
-      setCurrentFighterIndex((index) => (index + 1) % fighters.length);
+      setCurrentFighterIndex((index) => index + 1);
    };
 
    const prevFighter = () => {
-      setCurrentFighterIndex((index) => (index - 1 + fighters.length) % fighters.length);
+      setCurrentFighterIndex((index) => index - 1);
    };
 
    return (
@@ -88,7 +90,13 @@ function App() {
                      )}
                   </>
                )}
-               {isForm && <Form confirmBtn={openConfirmation} chosenFighter={fighter.name} />}
+               {isForm && (
+                  <Form
+                     confirmBtn={openConfirmation}
+                     backBtn={openWizard}
+                     chosenFighter={fighter.name}
+                  />
+               )}
                {isConfirmation && <Confirmation restartBtn={restartApp} />}
             </>
          )}

@@ -14,7 +14,9 @@ export const WelcomeScreen = ({ startBtn }) => {
                <br />
                for upcoming tournee.
             </p>
-            <img src="./src/assets/img/chooseBtn.png" className="startBtn" onClick={startBtn} />
+            <button className="startBtn" onClick={startBtn}>
+               <img src="./src/assets/img/chooseBtn.png" alt="start button" />
+            </button>
          </div>
       </>
    );
