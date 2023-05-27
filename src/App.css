@@ -164,3 +164,8 @@
   margin: 10px;
   cursor: pointer;
 }
+
+.formBox {
+  display: flex;
+  flex-direction: column;
+}
