@@ -168,4 +168,53 @@
 .formBox {
   display: flex;
   flex-direction: column;
+  margin-top: 60px;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.chosenFighter {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+  margin-top: 32px;
+}
+
+.chosenFighterName {
+  font-family: 'Germania One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  color: #FFFFFF;
+}
+.form input {
+  background: #2B1F1F;
+  border: 2px solid #31251E;
+  padding: 15px 15px;
+  width: 100%;
+}
+
+.fighterInput::placeholder {
+  font-family: 'Germania One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #9F9F9F;
+}
+
+.submitBtn {
+  margin-top: 100px;
+  cursor: pointer;
+}
+
