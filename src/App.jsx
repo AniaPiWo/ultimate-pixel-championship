@@ -20,11 +20,9 @@ function App() {
       setWizardState(true);
       setStepImg('Step1.png');
       setScreenTitle('Choose your fighter');
-      currHeroCheck();
    };
 
    const openForm = () => {
-      console.log('clicked');
       setWizardState(false);
       setFormState(true);
       setStepImg('Step2.png');
@@ -46,11 +44,11 @@ function App() {
    };
 
    const nextFighter = () => {
-      setCurrentFighterIndex((index) => index + 1);
+      setCurrentFighterIndex((index) => (index + 1) % fighters.length);
    };
 
    const prevFighter = () => {
-      setCurrentFighterIndex((index) => index - 1);
+      setCurrentFighterIndex((index) => (index - 1 + fighters.length) % fighters.length);
    };
 
    return (
