@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Form = ({ chosenFighter }) => {
+export const Form = ({ chosenFighter, confirmBtn, backBtn }) => {
    return (
       <>
          <div className="formBox">
@@ -17,13 +17,13 @@ export const Form = ({ chosenFighter }) => {
                   email
                </label>
                <input type="text" className="fighterInput" placeholder="Your email" />
-               <img
-                  className="submitBtn"
-                  src="./src/assets/img/submitBtn.png"
-                  alt="submit button"
-               />
+               <button type="submit" className="submitBtn" onSubmit={confirmBtn}>
+                  <img src="./src/assets/img/submitBtn.png" alt="submit button" />
+               </button>
             </form>
-            <img className="backBtn" src="./src/assets/img/backBtn.png" alt="back button" />
+            <button className="backBtn">
+               <img src="./src/assets/img/backBtn.png" alt="back button" onClick={backBtn} />
+            </button>
          </div>
       </>
    );

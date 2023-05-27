@@ -18,13 +18,13 @@ function App() {
 
    const openWizard = () => {
       setWizardState(true);
+      setFormState(false);
+      setCurrentFighterIndex(0);
       setStepImg('Step1.png');
       setScreenTitle('Choose your fighter');
-      currHeroCheck();
    };
 
    const openForm = () => {
-      console.log('clicked');
       setWizardState(false);
       setFormState(true);
       setStepImg('Step2.png');
@@ -90,7 +90,13 @@ function App() {
                      )}
                   </>
                )}
-               {isForm && <Form confirmBtn={openConfirmation} chosenFighter={fighter.name} />}
+               {isForm && (
+                  <Form
+                     confirmBtn={openConfirmation}
+                     backBtn={openWizard}
+                     chosenFighter={fighter.name}
+                  />
+               )}
                {isConfirmation && <Confirmation restartBtn={restartApp} />}
             </>
          )}
