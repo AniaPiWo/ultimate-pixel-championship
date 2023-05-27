@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Form = () => {
+export const Form = ({ confirmBtn }) => {
    return (
       <>
          <div className="formBox">
@@ -21,6 +21,7 @@ export const Form = () => {
                   className="submitBtn"
                   src="./src/assets/img/submitBtn.png"
                   alt="submit button"
+                  onClick={confirmBtn}
                />
             </form>
             <img className="backBtn" src="./src/assets/img/backBtn.png" alt="back button" />
