@@ -1,6 +1,5 @@
-import React from 'react';
 import '/src/App.css';
-//import * as css from 'WelcomeScreen.modules.css'
+import PropTypes from 'prop-types';
 
 export const WelcomeScreen = ({ startBtn }) => {
    return (
@@ -21,4 +20,8 @@ export const WelcomeScreen = ({ startBtn }) => {
          </div>
       </>
    );
+};
+
+WelcomeScreen.propTypes = {
+   startBtn: PropTypes.func.isRequired,
 };

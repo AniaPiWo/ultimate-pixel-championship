@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { WelcomeScreen } from './components/WelcomeScreen.jsx';
 import { Fighter } from './components/Fighter.jsx';
 import { Form } from './components/Form.jsx';
