@@ -92,7 +92,7 @@ function App() {
                )}
                {isForm && (
                   <Form
-                     confirmBtn={openConfirmation}
+                     openConfirmation={openConfirmation}
                      backBtn={openWizard}
                      chosenFighter={fighter.name}
                   />
