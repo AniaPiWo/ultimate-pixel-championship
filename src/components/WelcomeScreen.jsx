@@ -1,5 +1,6 @@
 import React from 'react';
 import '/src/App.css';
+//import * as css from 'WelcomeScreen.modules.css'
 
 export const WelcomeScreen = ({ startBtn }) => {
    return (
