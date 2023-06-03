@@ -227,5 +227,14 @@ button {
 
 .backBtn {
   margin-top: 15px;
+}
 
+.confirmationText {
+  font-family: 'Germania One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  color: #FFFFFF;
 }

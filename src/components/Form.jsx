@@ -1,87 +1,64 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
-export const Form = ({ chosenFighter, confirmBtn, backBtn }) => {
+export const Form = ({ chosenFighter, backBtn, openConfirmation }) => {
    const [email, setEmail] = useState('');
+   const [name, setName] = useState('');
 
-   const emailValidation = (e) => {
-      e.preventDefault();
-      if (!email.match(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i)) {
-         toast('Invalid email!', {
-            position: 'top-center',
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: 'light',
-         });
-         return;
+   useEffect(() => {
+      const storedName = localStorage.getItem('name');
+      const storedEmail = localStorage.getItem('email');
+      if (storedName) {
+         setName(storedName);
       }
-   };
+      if (storedEmail) {
+         setEmail(storedEmail);
+      }
+   }, []);
 
-   const toastyTest = (e) => {
+   const handleSubmit = (e) => {
       e.preventDefault();
-      toast.error('Invalid email!', {
-         position: 'top-center',
-         autoClose: 3000,
-         hideProgressBar: false,
-         closeOnClick: true,
-         pauseOnHover: true,
-         draggable: true,
-         progress: undefined,
-         theme: 'colored',
-      });
-      return;
+      localStorage.setItem('name', name);
+      localStorage.setItem('email', email);
+      openConfirmation();
    };
 
    return (
       <>
-         <ToastContainer
-            position="top-center"
-            autoClose={3000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="colored"
-         />
          <div className="formBox">
             <div>
                <p className="chosenFighter">chosen fighter</p>
                <p className="chosenFighterName">{chosenFighter}</p>
             </div>
-            <form className="form">
+            <form className="form" onSubmit={handleSubmit}>
                <label htmlFor="fighterInput" className="chosenFighter">
                   commander
                </label>
-               <input type="text" className="fighterInput" placeholder="Your name" required />
+               <input
+                  type="text"
+                  className="fighterInput"
+                  placeholder="Your name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+               />
                <label htmlFor="fighterInput" className="chosenFighter">
                   email
                </label>
                <input
-                  type="text"
+                  type="email"
                   className="fighterInput"
                   placeholder="Your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
                />
-               <button type="submit" className="submitBtn" onSubmit={confirmBtn}>
+               <button type="submit" className="submitBtn">
                   <img src="./src/assets/img/submitBtn.png" alt="submit button" />
                </button>
             </form>
             <button className="backBtn">
-               <img
-                  src="./src/assets/img/backBtn.png"
-                  alt="back button"
-                  /* onClick={backBtn} */ onClick={toastyTest}
-               />
+               <img src="./src/assets/img/backBtn.png" alt="back button" onClick={backBtn} />
             </button>
          </div>
       </>

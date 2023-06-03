@@ -26,7 +26,9 @@ export const Fighter = ({ name, health, attack, special, weakness, formBtn, imag
             </div>
             <div className="oval"></div>
          </div>
-         <img src="./src/assets/img/chooseBtn.png" className="chooseBtn" onClick={formBtn} />
+         <button>
+            <img src="./src/assets/img/chooseBtn.png" className="chooseBtn" onClick={formBtn} />
+         </button>
       </>
    );
 };
