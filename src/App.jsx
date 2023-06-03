@@ -40,7 +40,7 @@ function App() {
    };
 
    const restartApp = () => {
-      setWizardState(false);
+      setWizardState(true);
       setFormState(false);
       setConfirmationState(false);
    };
