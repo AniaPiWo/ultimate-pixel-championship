@@ -5,6 +5,24 @@ export const Form = ({ chosenFighter, backBtn, openConfirmation }) => {
    const [email, setEmail] = useState('');
    const [name, setName] = useState('');
 
+   useEffect(() => {
+      const storedName = localStorage.getItem('name');
+      const storedEmail = localStorage.getItem('email');
+      if (storedName) {
+         setName(storedName);
+      }
+      if (storedEmail) {
+         setEmail(storedEmail);
+      }
+   }, []);
+
+   const handleSubmit = (e) => {
+      e.preventDefault();
+      localStorage.setItem('name', name);
+      localStorage.setItem('email', email);
+      openConfirmation();
+   };
+
    return (
       <>
          <div className="formBox">
