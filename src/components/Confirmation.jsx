@@ -11,12 +11,12 @@ export const Confirmation = ({ restartBtn }) => {
             <br />
             [Commander]!
          </p>
-         <img src="./src/assets/img/Swords.png" />
+         <img src="/src/assets/img/Swords.png" />
          <p className="confirmationText">
             You will be notified about the next steps in the championship process via email.
          </p>
          <button onClick={restartBtn}>
-            <img src="./src/assets/img/submitAnother.png" alt="back button" />
+            <img src="/src/assets/img/submitAnother.png" alt="back button" />
          </button>
       </div>
    );

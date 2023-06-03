@@ -54,11 +54,11 @@ export const Form = ({ chosenFighter, backBtn, openConfirmation }) => {
                   required
                />
                <button type="submit" className="submitBtn">
-                  <img src="./src/assets/img/submitBtn.png" alt="submit button" />
+                  <img src="/src/assets/img/submitBtn.png" alt="submit button" />
                </button>
             </form>
             <button className="backBtn">
-               <img src="./src/assets/img/backBtn.png" alt="back button" onClick={backBtn} />
+               <img src="/src/assets/img/backBtn.png" alt="back button" onClick={backBtn} />
             </button>
          </div>
       </>
