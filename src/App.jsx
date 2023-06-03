@@ -61,7 +61,7 @@ function App() {
             <>
                <div className="stepper">
                   <h2 className="screenTitle">{screenTitle}</h2>
-                  <img className="stepImg" src={`/src/assets/img/${stepImg}`} alt="stepper" />
+                  <img className="stepImg" src={`/src/assets/${stepImg}`} alt="stepper" />
                </div>
                {isWizard && (
                   <>
@@ -76,7 +76,7 @@ function App() {
                      />
                      {currentFighterIndex !== 0 && (
                         <img
-                           src="/src/assets/img/prevBtn.png"
+                           src="/src/assets/prevBtn.png"
                            alt="prev button"
                            className="prevBtn"
                            onClick={prevFighter}
@@ -84,7 +84,7 @@ function App() {
                      )}
                      {currentFighterIndex !== fighters.length - 1 && (
                         <img
-                           src="/src/assets/img/nextBtn.png"
+                           src="/src/assets/nextBtn.png"
                            alt="next button"
                            className="nextBtn"
                            onClick={nextFighter}
