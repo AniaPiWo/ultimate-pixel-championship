@@ -1,7 +1,10 @@
-import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
-export default defineConfig({
+export default {
    plugins: [react()],
-});
+   base: '/ultimate-pixel-championship/',
+   root: './',
+   build: {
+      outDir: 'dist',
+   },
+};
