@@ -59,8 +59,10 @@ function App() {
             <WelcomeScreen startBtn={openWizard} />
          ) : (
             <>
-               <h2 className="screenTitle">{screenTitle}</h2>
-               <img className="stepImg" src={`./src/assets/img/${stepImg}`} alt="stepper" />
+               <div className="stepper">
+                  <h2 className="screenTitle">{screenTitle}</h2>
+                  <img className="stepImg" src={`./src/assets/img/${stepImg}`} alt="stepper" />
+               </div>
                {isWizard && (
                   <>
                      <Fighter
