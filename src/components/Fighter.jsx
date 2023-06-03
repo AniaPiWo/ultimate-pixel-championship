@@ -4,7 +4,7 @@ export const Fighter = ({ name, health, attack, special, weakness, formBtn, imag
    return (
       <>
          <div className="fighterBox">
-            <img src={`/src/assets/${imageSrc}`} alt="fighter" className="fighterImg" />
+            <img src={`./src/assets/${imageSrc}`} alt="fighter" className="fighterImg" />
             <p className="fighterName">{name}</p>
             <div className="statBox">
                <div>
@@ -27,7 +27,7 @@ export const Fighter = ({ name, health, attack, special, weakness, formBtn, imag
             <div className="oval"></div>
          </div>
          <button>
-            <img src="/src/assets/chooseBtn.png" className="chooseBtn" onClick={formBtn} />
+            <img src="./src/assets/chooseBtn.png" className="chooseBtn" onClick={formBtn} />
          </button>
       </>
    );
