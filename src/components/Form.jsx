@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 export const Form = ({ chosenFighter, backBtn, openConfirmation }) => {
    const [email, setEmail] = useState('');
@@ -62,4 +63,10 @@ export const Form = ({ chosenFighter, backBtn, openConfirmation }) => {
          </div>
       </>
    );
+};
+
+Form.propTypes = {
+   chosenFighter: PropTypes.string.isRequired,
+   backBtn: PropTypes.func.isRequired,
+   openConfirmation: PropTypes.func.isRequired,
 };

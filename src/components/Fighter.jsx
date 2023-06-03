@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 export const Fighter = ({ name, health, attack, special, weakness, formBtn, imageSrc }) => {
    return (
@@ -31,4 +31,14 @@ export const Fighter = ({ name, health, attack, special, weakness, formBtn, imag
          </button>
       </>
    );
+};
+
+Fighter.propTypes = {
+   name: PropTypes.string.isRequired,
+   health: PropTypes.number.isRequired,
+   attack: PropTypes.number.isRequired,
+   special: PropTypes.string.isRequired,
+   weakness: PropTypes.string.isRequired,
+   formBtn: PropTypes.func.isRequired,
+   imageSrc: PropTypes.string.isRequired,
 };

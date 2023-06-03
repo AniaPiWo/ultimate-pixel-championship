@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 export const Confirmation = ({ restartBtn }) => {
    return (
@@ -20,4 +20,8 @@ export const Confirmation = ({ restartBtn }) => {
          </button>
       </div>
    );
+};
+
+Confirmation.propTypes = {
+   restartBtn: PropTypes.func.isRequired,
 };
