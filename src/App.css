@@ -10,7 +10,7 @@
   background: #0F0F0F;
   color: white;
   font-size: 42px;
-  background-image: url('./src/assets/img/topMargin.png'), url('./src/assets/img/btmMargin.png');
+  background-image: url('/src/assets/topMargin.png'), url('/src/assets/btmMargin.png');
   background-repeat: no-repeat, no-repeat;
   background-position: top center, bottom center;
   background-size: auto, auto;
