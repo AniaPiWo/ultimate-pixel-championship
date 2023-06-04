@@ -3,7 +3,7 @@ import { WelcomeScreen } from './components/WelcomeScreen.jsx';
 import { Fighter } from './components/Fighter.jsx';
 import { Form } from './components/Form.jsx';
 import { Confirmation } from './components/Confirmation.jsx';
-import { fighters } from '../fighters.js';
+import { fighters } from '../fighters.mjs';
 import prevBtnImg from './assets/prevBtn.png';
 import nextBtnImg from './assets/nextBtn.png';
 import stepImg1 from './assets/Step1.png';
