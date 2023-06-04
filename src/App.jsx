@@ -25,14 +25,14 @@ function App() {
       setWizardState(true);
       setFormState(false);
       setCurrentFighterIndex(0);
-      setStepImg(stepImg1);
+      //setStepImg(stepImg1);
       setScreenTitle('Choose your fighter');
    };
 
    const openForm = () => {
       setWizardState(false);
       setFormState(true);
-      setStepImg(stepImg2);
+      //setStepImg(stepImg2);
       setScreenTitle('Booking Details');
       localStorage.setItem('fighter', JSON.stringify(fighter));
    };
@@ -40,7 +40,7 @@ function App() {
    const openConfirmation = () => {
       setFormState(false);
       setConfirmationState(true);
-      setStepImg(stepImg3);
+      //setStepImg(stepImg3);
       setScreenTitle('Confirmation');
    };
 
@@ -81,7 +81,7 @@ function App() {
                      />
                      {currentFighterIndex !== 0 && (
                         <img
-                           src={prevBtnImg}
+                           src="../assets/nextBtn.png"
                            alt="prev button"
                            className="prevBtn"
                            onClick={prevFighter}
@@ -89,7 +89,7 @@ function App() {
                      )}
                      {currentFighterIndex !== fighters.length - 1 && (
                         <img
-                           src={nextBtnImg}
+                           src="../assets/nextBtn.png"
                            alt="next button"
                            className="nextBtn"
                            onClick={nextFighter}
