@@ -4,11 +4,11 @@ import { Fighter } from './components/Fighter.jsx';
 import { Form } from './components/Form.jsx';
 import { Confirmation } from './components/Confirmation.jsx';
 import { fighters } from '../fighters.js';
-/* import prevBtnImg from '../assets/prevBtn.png';
-import nextBtnImg from '../assets/nextBtn.png';*/
-import stepImg1 from '../assets/Step1.png';
-import stepImg2 from '../assets/Step2.png';
-import stepImg3 from '../assets/Step3.png';
+import prevBtnImg from './assets/prevBtn.png';
+import nextBtnImg from './assets/nextBtn.png';
+import stepImg1 from './assets/Step1.png';
+import stepImg2 from './assets/Step2.png';
+import stepImg3 from './assets/Step3.png';
 import './App.css';
 
 function App() {
@@ -81,7 +81,7 @@ function App() {
                      />
                      {currentFighterIndex !== 0 && (
                         <img
-                           src="../assets/nextBtn.png"
+                           src={prevBtnImg}
                            alt="prev button"
                            className="prevBtn"
                            onClick={prevFighter}
@@ -89,7 +89,7 @@ function App() {
                      )}
                      {currentFighterIndex !== fighters.length - 1 && (
                         <img
-                           src="../assets/nextBtn.png"
+                           src={nextBtnImg}
                            alt="next button"
                            className="nextBtn"
                            onClick={nextFighter}
