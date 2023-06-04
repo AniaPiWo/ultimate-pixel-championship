@@ -45,6 +45,7 @@ function App() {
    };
 
    const restartApp = () => {
+      openWizard();
       setWizardState(true);
       setFormState(false);
       setConfirmationState(false);
