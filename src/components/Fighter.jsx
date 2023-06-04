@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import chooseBtnImg from '../assets/chooseBtn.png';
 
 export const Fighter = ({ name, health, attack, special, weakness, formBtn, imageSrc }) => {
    return (
@@ -27,7 +28,7 @@ export const Fighter = ({ name, health, attack, special, weakness, formBtn, imag
             <div className="oval"></div>
          </div>
          <button>
-            <img src="./src/assets/chooseBtn.png" className="chooseBtn" onClick={formBtn} />
+            <img src={chooseBtnImg} className="chooseBtn" onClick={formBtn} />
          </button>
       </>
    );

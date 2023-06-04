@@ -4,6 +4,11 @@ import { Fighter } from './components/Fighter.jsx';
 import { Form } from './components/Form.jsx';
 import { Confirmation } from './components/Confirmation.jsx';
 import { fighters } from '../fighters.js';
+import prevBtnImg from '../assets/backBtn.png';
+import nextBtnImg from '../assets/backBtn.png';
+import stepImg1 from '../assets/Step1.png';
+import stepImg2 from '../assets/Step2.png';
+import stepImg3 from '../assets/Step3.png';
 import './App.css';
 
 function App() {
@@ -20,14 +25,14 @@ function App() {
       setWizardState(true);
       setFormState(false);
       setCurrentFighterIndex(0);
-      setStepImg('Step1.png');
+      setStepImg(stepImg1);
       setScreenTitle('Choose your fighter');
    };
 
    const openForm = () => {
       setWizardState(false);
       setFormState(true);
-      setStepImg('Step2.png');
+      setStepImg(stepImg1);
       setScreenTitle('Booking Details');
       localStorage.setItem('fighter', JSON.stringify(fighter));
    };
@@ -35,7 +40,7 @@ function App() {
    const openConfirmation = () => {
       setFormState(false);
       setConfirmationState(true);
-      setStepImg('Step3.png');
+      setStepImg(stepImg1);
       setScreenTitle('Confirmation');
    };
 
@@ -61,7 +66,7 @@ function App() {
             <>
                <div className="stepper">
                   <h2 className="screenTitle">{screenTitle}</h2>
-                  <img className="stepImg" src={`./src/assets/${stepImg}`} alt="stepper" />
+                  <img className="stepImg" src={stepImg} alt="stepper" />
                </div>
                {isWizard && (
                   <>
@@ -76,7 +81,7 @@ function App() {
                      />
                      {currentFighterIndex !== 0 && (
                         <img
-                           src="./src/assets/prevBtn.png"
+                           src={prevBtnImg}
                            alt="prev button"
                            className="prevBtn"
                            onClick={prevFighter}
@@ -84,7 +89,7 @@ function App() {
                      )}
                      {currentFighterIndex !== fighters.length - 1 && (
                         <img
-                           src="./src/assets/nextBtn.png"
+                           src={nextBtnImg}
                            alt="next button"
                            className="nextBtn"
                            onClick={nextFighter}

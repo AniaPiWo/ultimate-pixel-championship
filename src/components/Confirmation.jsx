@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import swordsImg from '../assets/Swords.png';
+import submitAnotherImg from '../assets/submitAnother.png';
 
 export const Confirmation = ({ restartBtn }) => {
    return (
@@ -11,12 +13,12 @@ export const Confirmation = ({ restartBtn }) => {
             <br />
             [Commander]!
          </p>
-         <img src="./src/assets/Swords.png" />
+         <img src={swordsImg} />
          <p className="confirmationText">
             You will be notified about the next steps in the championship process via email.
          </p>
          <button onClick={restartBtn}>
-            <img src="./src/assets/submitAnother.png" alt="back button" />
+            <img src={submitAnotherImg} alt="back button" />
          </button>
       </div>
    );

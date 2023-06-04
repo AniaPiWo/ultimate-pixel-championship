@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import submitBtnImg from '../assets/submitBtn.png';
+import backBtnImg from '../assets/backBtn.png';
 
 export const Form = ({ chosenFighter, backBtn, openConfirmation }) => {
    const [email, setEmail] = useState('');
@@ -54,11 +56,11 @@ export const Form = ({ chosenFighter, backBtn, openConfirmation }) => {
                   required
                />
                <button type="submit" className="submitBtn">
-                  <img src="./src/assets/submitBtn.png" alt="submit button" />
+                  <img src={submitBtnImg} alt="submit button" />
                </button>
             </form>
             <button className="backBtn">
-               <img src="./src/assets/backBtn.png" alt="back button" onClick={backBtn} />
+               <img src={backBtnImg} alt="back button" onClick={backBtn} />
             </button>
          </div>
       </>
