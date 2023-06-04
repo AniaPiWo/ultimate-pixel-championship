@@ -4,8 +4,8 @@ import { Fighter } from './components/Fighter.jsx';
 import { Form } from './components/Form.jsx';
 import { Confirmation } from './components/Confirmation.jsx';
 import { fighters } from '../fighters.js';
-import prevBtnImg from '../assets/backBtn.png';
-import nextBtnImg from '../assets/backBtn.png';
+import prevBtnImg from '../assets/prevBtn.png';
+import nextBtnImg from '../assets/nextBtn.png';
 import stepImg1 from '../assets/Step1.png';
 import stepImg2 from '../assets/Step2.png';
 import stepImg3 from '../assets/Step3.png';
@@ -32,7 +32,7 @@ function App() {
    const openForm = () => {
       setWizardState(false);
       setFormState(true);
-      setStepImg(stepImg1);
+      setStepImg(stepImg2);
       setScreenTitle('Booking Details');
       localStorage.setItem('fighter', JSON.stringify(fighter));
    };
@@ -40,7 +40,7 @@ function App() {
    const openConfirmation = () => {
       setFormState(false);
       setConfirmationState(true);
-      setStepImg(stepImg1);
+      setStepImg(stepImg3);
       setScreenTitle('Confirmation');
    };
 
