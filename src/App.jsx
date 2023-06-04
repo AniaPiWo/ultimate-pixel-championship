@@ -5,10 +5,10 @@ import { Form } from './components/Form.jsx';
 import { Confirmation } from './components/Confirmation.jsx';
 import { fighters } from '../fighters.js';
 /* import prevBtnImg from '../assets/prevBtn.png';
-import nextBtnImg from '../assets/nextBtn.png';
+import nextBtnImg from '../assets/nextBtn.png';*/
 import stepImg1 from '../assets/Step1.png';
 import stepImg2 from '../assets/Step2.png';
-import stepImg3 from '../assets/Step3.png'; */
+import stepImg3 from '../assets/Step3.png';
 import './App.css';
 
 function App() {
@@ -25,14 +25,14 @@ function App() {
       setWizardState(true);
       setFormState(false);
       setCurrentFighterIndex(0);
-      //setStepImg(stepImg1);
+      setStepImg(stepImg1);
       setScreenTitle('Choose your fighter');
    };
 
    const openForm = () => {
       setWizardState(false);
       setFormState(true);
-      //setStepImg(stepImg2);
+      setStepImg(stepImg2);
       setScreenTitle('Booking Details');
       localStorage.setItem('fighter', JSON.stringify(fighter));
    };
@@ -40,7 +40,7 @@ function App() {
    const openConfirmation = () => {
       setFormState(false);
       setConfirmationState(true);
-      //setStepImg(stepImg3);
+      setStepImg(stepImg3);
       setScreenTitle('Confirmation');
    };
 
