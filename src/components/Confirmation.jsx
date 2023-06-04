@@ -3,6 +3,8 @@ import swordsImg from '../assets/Swords.png';
 import submitAnotherImg from '../assets/submitAnother.png';
 
 export const Confirmation = ({ restartBtn }) => {
+   const commander = localStorage.getItem('name');
+
    return (
       <div className="confirmationBox">
          <p className="confirmationTitle">
@@ -11,7 +13,7 @@ export const Confirmation = ({ restartBtn }) => {
             <br />
             Commander
             <br />
-            [Commander]!
+            {commander}!
          </p>
          <img src={swordsImg} />
          <p className="confirmationText">
