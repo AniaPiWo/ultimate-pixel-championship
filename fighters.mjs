@@ -4,7 +4,7 @@ export const fighters = [
       imgSrc: 'Karen.png',
       health: 67,
       attack: '14 - 18',
-      specialAttack: 'Passive Aggressiveness',
+      special: 'Passive Aggressiveness',
       weakness: 'Logical thinking',
    },
    {
@@ -12,7 +12,7 @@ export const fighters = [
       imgSrc: 'MadSuzie.png',
       health: 78,
       attack: '12 - 18',
-      specialAttack: 'Fist Punch',
+      special: 'Fist Punch',
       weakness: 'Pink color',
    },
    {
@@ -20,7 +20,7 @@ export const fighters = [
       imgSrc: 'JennyWick.png',
       health: 55,
       attack: '22 - 24',
-      specialAttack: 'Pencil Stab',
+      special: 'Pencil Stab',
       weakness: 'Contrast',
    },
    {
@@ -28,7 +28,7 @@ export const fighters = [
       imgSrc: 'PurplePie.png',
       health: 80,
       attack: '9 - 12',
-      specialAttack: 'Roasting',
+      special: 'Roasting',
       weakness: 'Sunscreen',
    },
    {
@@ -36,7 +36,7 @@ export const fighters = [
       imgSrc: 'PaleLora.png',
       health: 60,
       attack: '15 - 16',
-      specialAttack: 'Bleach Splash',
+      special: 'Bleach Splash',
       weakness: 'Candy Cotton',
    },
    {
@@ -44,7 +44,7 @@ export const fighters = [
       imgSrc: 'IvyIrene.png',
       health: 70,
       attack: '10 - 14',
-      specialAttack: 'Potion Pill',
+      special: 'Potion Pill',
       weakness: 'Broccoli',
    },
 ];

@@ -2,10 +2,12 @@ import PropTypes from 'prop-types';
 import chooseBtnImg from '../assets/chooseBtn.png';
 
 export const Fighter = ({ name, health, attack, special, weakness, formBtn, imageSrc }) => {
+   const imagePath = new URL(`../assets/${imageSrc}`, import.meta.url).href;
+
    return (
       <>
          <div className="fighterBox">
-            <img src={`./src/assets/${imageSrc}`} alt="fighter" className="fighterImg" />
+            <img src={imagePath} alt="fighter" className="fighterImg" />
             <p className="fighterName">{name}</p>
             <div className="statBox">
                <div>
