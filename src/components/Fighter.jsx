@@ -39,7 +39,7 @@ export const Fighter = ({ name, health, attack, special, weakness, formBtn, imag
 Fighter.propTypes = {
    name: PropTypes.string.isRequired,
    health: PropTypes.number.isRequired,
-   attack: PropTypes.number.isRequired,
+   attack: PropTypes.string.isRequired,
    special: PropTypes.string.isRequired,
    weakness: PropTypes.string.isRequired,
    formBtn: PropTypes.func.isRequired,

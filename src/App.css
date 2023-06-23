@@ -69,7 +69,6 @@
 
 .fighterBox {
   margin-top: 30px;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,8 +125,8 @@
   border-radius: 50%;
   background: #DA8B14;
   opacity: 0.4;
-  top: 155px;
-  left: 0px;
+  top: 350px;
+  left: 50;
 }
 
 .chooseBtn {
@@ -136,6 +135,7 @@
 
 .fighterImg {
   z-index: 100;
+  position: relative;
 }
 
 .screen {
@@ -203,7 +203,11 @@
   width: 100%;
 }
 
-.fighterInput::placeholder {
+.fighterInputEmail {
+  position: relative;
+}
+
+.form input::placeholder {
   font-family: 'Germania One';
   font-style: normal;
   font-weight: 400;
@@ -263,4 +267,31 @@ button {
   text-align: center;
   letter-spacing: 0.03em;
   color: #FFFFFF;
+}
+
+
+.errorMsg {
+  position: absolute;
+  color: #F73939;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  top: 473px;
+}
+
+.fighterInputEmail.invalid {
+  border-color: red;
+}
+
+.errorMsg.hidden {
+  display: none;
+}
+
+.fighterInputEmail, .fighterInput {
+  font-family: 'Germania One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: white;
 }
