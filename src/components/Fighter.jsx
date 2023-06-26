@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import chooseBtnImg from '../assets/chooseBtn.png';
+import chooseBtnImg from '../assets/chooseBtn.svg';
 
 export const Fighter = ({ name, health, attack, special, weakness, formBtn, imageSrc }) => {
    const imagePath = new URL(`../assets/${imageSrc}`, import.meta.url).href;

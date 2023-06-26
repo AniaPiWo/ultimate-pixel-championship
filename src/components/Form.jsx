@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import submitBtnImg from '../assets/submitBtn.png';
-import backBtnImg from '../assets/backBtn.png';
+import submitBtnImg from '../assets/submitBtn.svg';
+import backBtnImg from '../assets/backBtn.svg';
 
 export const Form = ({ chosenFighter, backBtn, openConfirmation }) => {
    const [email, setEmail] = useState('');

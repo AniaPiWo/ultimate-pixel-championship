@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import swordsImg from '../assets/Swords.png';
-import submitAnotherImg from '../assets/submitAnother.png';
+import submitAnotherImg from '../assets/submitAnother.svg';
 
 export const Confirmation = ({ restartBtn }) => {
    const commander = localStorage.getItem('name');

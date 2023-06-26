@@ -1,6 +1,6 @@
 import '/src/App.css';
 import PropTypes from 'prop-types';
-import chooseBtnImg from '../assets/chooseBtn.png';
+import chooseBtnImg from '../assets/chooseBtn.svg';
 import swordsImg from '../assets/Swords.png';
 
 export const WelcomeScreen = ({ startBtn }) => {
